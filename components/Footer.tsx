@@ -54,9 +54,13 @@ export default function Footer() {
             advertising@plexstorm.com
           </a>
           <form>
-            <div>
-              <input type="email" />
-              <button>Subscribe</button>
+            <div className="flex mt-3">
+              <input
+                type="email"
+                className="bg-transparent text-gray-600 border border-gray-600 py-2 pl-2"
+                placeholder="Your email"
+              />
+              <button className="border border-gray-600 text-gray-600 text-xs px-3 border-l-0">Subscribe</button>
             </div>
           </form>
         </div>
