@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Intro from "../components/Intro";
 import TopChannels from "../components/TopChannels";
+import BecomeMember from "../components/BecomeMember";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <main>
         <Intro />
         <TopChannels />
+        <BecomeMember />
       </main>
       <Footer />
     </>
