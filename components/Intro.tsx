@@ -1,4 +1,5 @@
 import React from "react";
+import useIsMobile from "../hooks/useIsMobile";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { EffectCoverflow, SwiperOptions, Pagination, Autoplay } from "swiper";
 import IntroItem from "./IntroItem";
@@ -7,6 +8,8 @@ import "swiper/swiper-bundle.min.css";
 SwiperCore.use([EffectCoverflow, Pagination, Autoplay]);
 
 export default function Intro() {
+  const device = useIsMobile();
+
   const images = [
     "/intro-images/3.jpeg",
     "/intro-images/3.jpeg",
@@ -55,7 +58,7 @@ export default function Intro() {
           We Love
         </h5>
       </div>
-      <div className="max-w-full" style={{ minHeight: 460 }}>
+      <div className="max-w-full" style={{ minHeight: device.isMobile() ? 300 : 460 }}>
         <Swiper {...sliderSettings} className="h-full">
           {images.map((item, i) => (
             <SwiperSlide>{({ isActive }) => <IntroItem key={i} isActive={isActive} image={item} />}</SwiperSlide>
