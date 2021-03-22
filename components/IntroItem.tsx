@@ -12,6 +12,8 @@ const IntroItem: React.FunctionComponent<IntroItemProps> = ({ isActive, image })
       {isActive && <span className="bg-brown text-white text-xs px-2 rounded-3xl absolute top-4 left-4">1.2K</span>}
       <img
         src={image}
+        width="640"
+        height="480"
         className={`w-full h-full object-cover rounded-3xl ${isActive ? "" : "filter-brightness-200"}`}
         alt="GamerGirl"
       />
