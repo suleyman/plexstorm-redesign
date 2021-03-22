@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .filter-grayscale {
+    filter: grayscale(100%);
+  }
+  .filter-brightness-200 {
+    filter: brightness(0.2);
+  }
+  .filter-brightness-500 {
+    filter: brightness(0.5);
+  }
+}
