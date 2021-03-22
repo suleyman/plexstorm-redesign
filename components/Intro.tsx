@@ -55,7 +55,7 @@ export default function Intro() {
           We Love
         </h5>
       </div>
-      <div className="max-w-full">
+      <div className="max-w-full" style={{ minHeight: 460 }}>
         <Swiper {...sliderSettings} className="h-full">
           {images.map((item, i) => (
             <SwiperSlide>{({ isActive }) => <IntroItem key={i} isActive={isActive} image={item} />}</SwiperSlide>
