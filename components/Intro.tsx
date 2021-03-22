@@ -1,10 +1,10 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { EffectCoverflow, SwiperOptions, Pagination } from "swiper";
+import SwiperCore, { EffectCoverflow, SwiperOptions, Pagination, Autoplay } from "swiper";
 import IntroItem from "./IntroItem";
 import "swiper/swiper-bundle.min.css";
 
-SwiperCore.use([EffectCoverflow, Pagination]);
+SwiperCore.use([EffectCoverflow, Pagination, Autoplay]);
 
 export default function Intro() {
   const images = [
@@ -22,6 +22,9 @@ export default function Intro() {
     slidesPerView: 1,
     initialSlide: 2,
     loop: true,
+    autoplay: {
+      delay: 3000,
+    },
     grabCursor: true,
     slideToClickedSlide: true,
     coverflowEffect: {
